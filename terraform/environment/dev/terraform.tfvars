@@ -9,6 +9,7 @@ service_cpu         = 256
 service_memory      = 512
 service_launch_type = "EC2"
 service_task_count  = 3
+service_hosts       = ["chip.linuxtips.demo"]
 
 ssm_vpc_id           = "/linuxtips-vpc/vpc/vpc_id"
 ssm_listener         = "/linuxtips/ecs/lb/listener"

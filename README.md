@@ -19,3 +19,10 @@ docker pull fidelissauro/chip:v2
 docker tag fidelissauro/chip:v2 050451389665.dkr.ecr.us-east-1.amazonaws.com/linuxtips-ecs-cluster/chip:latest
 docker push 050451389665.dkr.ecr.us-east-1.amazonaws.com/linuxtips-ecs-cluster/chip:latest
 ```
+
+### lb cal
+
+```sh 
+ curl linuxtips-ecs-cluster-ingress-627259266.us-east-1.elb.amazonaws.com/system -H "Host: chip.linuxtips.demo"
+ # {"hostname":"ip-10-0-23-55.ec2.internal","cpus":2,"os":"","hypervisor":"","memory":{"alloc_MiB":9,"system_MiB":0,"gc":5}}%
+ ```

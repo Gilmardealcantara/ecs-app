@@ -12,6 +12,7 @@ module "service" {
   service_healthcheck         = var.service_healthcheck
   service_launch_type         = var.service_launch_type
   service_task_count          = var.service_task_count
+  service_hosts               = var.service_hosts
 
   environment_variables = var.environment_variables
   capabilities          = var.capabilities
