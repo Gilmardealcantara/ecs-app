@@ -8,6 +8,8 @@ variable "service_port" {}
 variable "service_cpu" {}
 variable "service_memory" {}
 variable "service_healthcheck" {}
+variable "service_launch_type" {}
+variable "service_task_count" {}
 
 variable "ssm_vpc_id" {}
 variable "ssm_listener" {}
