@@ -1,5 +1,6 @@
 module "service" {
   source = "/Users/gilmar.alcantara/courses/linuxtips/ecs-service-module"
+  region = var.region
 
   cluster_name                = var.cluster_name
   service_name                = var.service_name
@@ -9,8 +10,11 @@ module "service" {
   service_listener            = data.aws_ssm_parameter.listener.value
   service_task_execution_role = aws_iam_role.main.arn
 
-  vpc_id = data.aws_ssm_parameter.vpc_id.value
+  environment_variables = var.environment_variables
+  capabilities          = var.capabilities
 
+
+  vpc_id = data.aws_ssm_parameter.vpc_id.value
   private_subnets = [
     data.aws_ssm_parameter.private_subnet_1.value,
     data.aws_ssm_parameter.private_subnet_2.value,
