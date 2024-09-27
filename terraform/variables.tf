@@ -1,3 +1,5 @@
+# tflint-ignore-file: terraform_typed_variables
+
 variable "region" {}
 variable "profile" {}
 
@@ -21,3 +23,14 @@ variable "ssm_private_subnet_3" {}
 variable "environment_variables" {}
 variable "capabilities" {}
 
+variable "scale_type" {}
+variable "task_minimum" {}
+variable "task_maximum" {}
+
+variable "scale_out_cpu_threshold" {}
+variable "scale_out_adjustment" {}
+variable "scale_out_comparison_operator" {}
+variable "scale_out_statistic" {}
+variable "scale_out_period" {}
+variable "scale_out_evaluation_periods" {}
+variable "scale_out_cooldown" {}
