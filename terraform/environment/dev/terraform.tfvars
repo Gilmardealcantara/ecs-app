@@ -40,7 +40,7 @@ service_healthcheck = {
   port                = 8080
 }
 
-scale_type   = "cpu"
+scale_type   = "cpu_tracking"
 task_minimum = 3
 task_maximum = 12
 
@@ -60,3 +60,6 @@ scale_in_statistic           = "Average"
 scale_in_period              = 60
 scale_in_evaluation_periods  = 2
 scale_in_cooldown            = 60
+
+scale_tracking_cpu = 50
+
