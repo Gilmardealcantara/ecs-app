@@ -16,6 +16,7 @@ ssm_listener         = "/linuxtips/ecs/lb/listener"
 ssm_private_subnet_1 = "/linuxtips-vpc/vpc/subnet_private_1a"
 ssm_private_subnet_2 = "/linuxtips-vpc/vpc/subnet_private_1b"
 ssm_private_subnet_3 = "/linuxtips-vpc/vpc/subnet_private_1c"
+ssm_alb              = "/linuxtips/ecs/lb/id"
 
 environment_variables = [
   {
@@ -40,7 +41,7 @@ service_healthcheck = {
   port                = 8080
 }
 
-scale_type   = "cpu_tracking"
+scale_type   = "requests_tracking"
 task_minimum = 3
 task_maximum = 12
 
@@ -62,4 +63,6 @@ scale_in_evaluation_periods  = 2
 scale_in_cooldown            = 60
 
 scale_tracking_cpu = 50
+
+scale_tracking_requests = 30
 

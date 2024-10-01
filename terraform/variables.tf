@@ -19,6 +19,7 @@ variable "ssm_listener" {}
 variable "ssm_private_subnet_1" {}
 variable "ssm_private_subnet_2" {}
 variable "ssm_private_subnet_3" {}
+variable "ssm_alb" {}
 
 variable "environment_variables" {}
 variable "capabilities" {}
@@ -44,3 +45,6 @@ variable "scale_in_evaluation_periods" {}
 variable "scale_in_cooldown" {}
 
 variable "scale_tracking_cpu" {}
+
+variable "scale_tracking_requests" {}
+
